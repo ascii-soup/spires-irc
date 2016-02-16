@@ -7,18 +7,21 @@ use PHPOxford\Spires\IRC\Commands\Command;
 use PHPOxford\Spires\IRC\Commands\Join;
 use PHPOxford\Spires\IRC\Commands\Ping;
 use PHPOxford\Spires\IRC\Commands\Privmsg;
-use PHPOxford\Spires\IRC\Connection;
+use PHPOxford\Spires\IRC\Connection\Connection;
 use PHPOxford\Spires\IRC\Message;
 use PHPOxford\Spires\IRC\Message\Prefix;
-use PHPOxford\Spires\IRC\Parser;
-use PHPOxford\Spires\IRC\User;
 
-class IrcClient
+class Client
 {
     /**
      * @var Connection
      */
     private $connection;
+
+    /**
+     * @var string
+     */
+    private $channel;
 
     /**
      * @var User
@@ -35,22 +38,16 @@ class IrcClient
      */
     private $plugins = [];
 
-    private $socket;
-
-    public function __construct(Connection $connection, User $user)
+    public function __construct(Connection $connection, string $channel, User $user)
     {
         $this->connection = $connection;
+        $this->channel = $channel;
         $this->user = $user;
-    }
-
-    public function connection() : Connection
-    {
-        return $this->connection;
     }
 
     public function channel() : string
     {
-        return $this->connection()->channel();
+        return $this->channel;
     }
 
     public function user() : User
@@ -58,24 +55,11 @@ class IrcClient
         return $this->user;
     }
 
-    public function socket()
-    {
-        return $this->socket;
-    }
-
     public function connect()
     {
-        $this->socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-
-        $isConnected = socket_connect(
-            $this->socket,
-            $this->connection()->server(),
-            $this->connection()->port()
-        );
-
         $this->write("NICK {$this->user()->nickname()}\r\n");
         $this->write("USER {$this->user()->username()} {$this->user()->usermode()} * :{$this->user()->realname()}\r\n");
-        $this->write("JOIN {$this->connection()->channel()}\r\n");
+        $this->write("JOIN {$this->channel()}\r\n");
     }
 
     public function addAction($callback)
@@ -88,17 +72,12 @@ class IrcClient
         $this->plugins[] = $plugin;
     }
 
-    public function read()
-    {
-        return socket_read($this->socket, 2048, PHP_NORMAL_READ);
-    }
-
     public function write(string $response)
     {
         $response = trim($response);
 
         $this->debug("[ write ]: " . $response . "\n");
-        return socket_write($this->socket, $response . "\r\n");
+        return $this->connection->write($response . "\r\n");
     }
 
     public function debug(string $string)
@@ -115,7 +94,7 @@ class IrcClient
     {
         $parser = new Parser();
 
-        while ($raw = $this->read()) {
+        while ($raw = $this->connection->read()) {
 
             if (!$raw = trim($raw)) {
                 continue;

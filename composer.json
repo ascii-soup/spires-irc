@@ -30,17 +30,17 @@
   },
   "autoload": {
     "psr-4": {
-      "PHPOxford\\SpiresIrc\\": "src/"
+      "PHPOxford\\Spires\\IRC\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PHPOxford\\SpiresIrc\\Tests\\": "tests/"
+      "PHPOxford\\Spires\\IRC\\Tests\\": "tests/"
     }
   },
   "scripts": {
     "sniff": "./vendor/bin/phpcs src/ --standard=PSR2 --report=summary",
-    "fix": "./vendor/bin/phpcbf src/ --standard=PSR2",
+    "fix": "./vendor/bin/phpcbf fix src/ --standard=PSR2",
     "test": "./vendor/bin/phpunit"
   },
   "extra": {

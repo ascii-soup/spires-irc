@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1);
 
-use PHPOxford\Spires\IRC\Connection;
+use PHPOxford\Spires\IRC\Connection\Details;
+use PHPOxford\Spires\IRC\Connection\TCP;
 use PHPOxford\Spires\IRC\Message;
 use PHPOxford\Spires\IRC\User;
-use PHPOxford\Spires\IRC\IrcClient;
+use PHPOxford\Spires\IRC\Client;
 use PHPOxford\Spires\IRC\Plugins\Greetings;
 use PHPOxford\Spires\IRC\Plugins\PingPong;
 use PHPOxford\Spires\IRC\Plugins\Time;
@@ -20,12 +21,9 @@ set_time_limit(0);
 /* Turn on implicit output flushing so we see what we're getting as it comes in. */
 ob_implicit_flush();
 
-$client = new IrcClient(
-    new Connection(
-        '#phpoxford',
-//        '##martinsbottesting',
-        'irc.freenode.com'
-    ),
+$client = new Client(
+    new TCP(new Details('irc.freenode.com')),
+    '#phpoxford',
     new User(
         'spires',
         'spires',
@@ -34,7 +32,6 @@ $client = new IrcClient(
 );
 
 $client->connect();
-
 
 // Ping Pong
 $client->addPlugin(new PingPong());

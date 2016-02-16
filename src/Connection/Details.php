@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\Spires\IRC;
+namespace PHPOxford\Spires\IRC\Connection;
 
-class Connection
+class Details
 {
     /**
      * @var string
@@ -20,16 +20,10 @@ class Connection
      */
     private $port;
 
-    public function __construct(string $channel, string $server, int $port = 6667)
+    public function __construct(string $server, int $port = 6667)
     {
-        $this->channel = $channel;
         $this->server = $server;
         $this->port = $port;
-    }
-
-    public function channel() : string
-    {
-        return $this->channel;
     }
 
     public function server() : string
