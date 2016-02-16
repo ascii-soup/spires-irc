@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc\Irc\Message;
+namespace PHPOxford\Spires\IRC\Message;
 
 class Prefix
 {

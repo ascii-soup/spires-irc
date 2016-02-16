@@ -1,15 +1,15 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc\Commands;
+namespace PHPOxford\Spires\IRC\Tests\Irc\Commands;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Privmsg;
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Commands\Privmsg;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 class PrivmsgTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg
      */
     public function implements_command_interface()
     {
@@ -20,7 +20,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::command
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::command
      */
     public function can_get_the_command_string()
     {
@@ -31,7 +31,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::targets
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::targets
      */
     public function can_get_the_targets()
     {
@@ -42,7 +42,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::text
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::text
      */
     public function can_get_the_text()
     {
@@ -53,7 +53,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::params
      */
     public function can_get_params_with_one_target()
     {
@@ -64,7 +64,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::params
      */
     public function can_get_params_with_two_targets()
     {
@@ -75,7 +75,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::__toString
      */
     public function can_cast_to_string_with_one_target()
     {
@@ -86,7 +86,7 @@ class PrivmsgTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Privmsg::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Privmsg::__toString
      */
     public function can_cast_to_string_with_two_targets()
     {

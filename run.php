@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-use PHPOxford\SpiresIrc\Irc\Connection;
-use PHPOxford\SpiresIrc\Irc\Message;
-use PHPOxford\SpiresIrc\Irc\User;
-use PHPOxford\SpiresIrc\IrcClient;
-use PHPOxford\SpiresIrc\Plugins\Greetings;
-use PHPOxford\SpiresIrc\Plugins\PingPong;
-use PHPOxford\SpiresIrc\Plugins\Time;
-use PHPOxford\SpiresIrc\Plugins\Welcome;
+use PHPOxford\Spires\IRC\Connection;
+use PHPOxford\Spires\IRC\Message;
+use PHPOxford\Spires\IRC\User;
+use PHPOxford\Spires\IRC\IrcClient;
+use PHPOxford\Spires\IRC\Plugins\Greetings;
+use PHPOxford\Spires\IRC\Plugins\PingPong;
+use PHPOxford\Spires\IRC\Plugins\Time;
+use PHPOxford\Spires\IRC\Plugins\Welcome;
 
 require_once 'vendor/autoload.php';
 

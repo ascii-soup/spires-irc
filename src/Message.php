@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc\Irc;
+namespace PHPOxford\Spires\IRC;
 
-use PHPOxford\SpiresIrc\Irc\Message\Prefix;
-use PHPOxford\SpiresIrc\Irc\Message\Command;
+use PHPOxford\Spires\IRC\Message\Prefix;
+use PHPOxford\Spires\IRC\Message\Command;
 
 class Message
 {

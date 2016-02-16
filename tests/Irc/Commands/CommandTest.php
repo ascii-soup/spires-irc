@@ -1,15 +1,15 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc\Commands;
+namespace PHPOxford\Spires\IRC\Tests\Irc\Commands;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Command;
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Commands\Command;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 class CommandTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Command::command
+     * @covers \PHPOxford\Spires\IRC\Commands\Command::command
      */
     public function implements_command_interface()
     {
@@ -20,7 +20,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Command::command
+     * @covers \PHPOxford\Spires\IRC\Commands\Command::command
      */
     public function can_get_the_command_string()
     {
@@ -31,7 +31,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Command::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Command::params
      */
     public function can_get_the_params_string()
     {
@@ -42,7 +42,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Command::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Command::__toString
      */
     public function can_cast_to_string_without_params()
     {
@@ -53,7 +53,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Command::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Command::__toString
      */
     public function can_cast_to_string_with_params()
     {

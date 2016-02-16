@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc\Irc;
+namespace PHPOxford\Spires\IRC;
 
 class Parser
 {

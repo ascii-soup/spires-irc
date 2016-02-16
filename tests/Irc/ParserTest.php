@@ -1,14 +1,14 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc;
+namespace PHPOxford\Spires\IRC\Tests\Irc;
 
-use PHPOxford\SpiresIrc\Irc\Parser;
+use PHPOxford\Spires\IRC\Parser;
 
 class ParserTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Parser::parse
+     * @covers \PHPOxford\Spires\IRC\Parser::parse
      * @dataProvider dataMessages
      */
     public function can_parse_valid_messages_to_an_array_of_data($message, $expected)

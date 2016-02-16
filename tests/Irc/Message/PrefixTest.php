@@ -1,14 +1,14 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc\Message;
+namespace PHPOxford\Spires\IRC\Tests\Irc\Message;
 
-use PHPOxford\SpiresIrc\Irc\Message\Prefix;
+use PHPOxford\Spires\IRC\Message\Prefix;
 
 class PrefixTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::nickname
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::nickname
      */
     public function can_get_nickname()
     {
@@ -19,7 +19,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::username
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::username
      */
     public function can_get_username()
     {
@@ -30,7 +30,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::hostname
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::hostname
      */
     public function can_get_hostname()
     {
@@ -41,7 +41,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::servername
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::servername
      */
     public function can_get_servername()
     {
@@ -52,7 +52,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::none
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::none
      */
     public function factory_method_for_empty_prefix()
     {
@@ -66,7 +66,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::user
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::user
      */
     public function factory_method_for_user_prefix()
     {
@@ -80,7 +80,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::server
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::server
      */
     public function factory_method_for_server_prefix()
     {
@@ -94,7 +94,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::raw
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::raw
      */
     public function can_get_the_raw_prefix_string_for_empty_prefix()
     {
@@ -105,7 +105,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::raw
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::raw
      */
     public function can_get_the_raw_prefix_string_for_user_prefix_with_all_set()
     {
@@ -116,7 +116,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::raw
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::raw
      */
     public function can_get_the_raw_prefix_string_for_user_prefix_with_nick_and_user_set()
     {
@@ -127,7 +127,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::raw
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::raw
      */
     public function can_get_the_raw_prefix_string_for_user_prefix_with_nick_and_host_set()
     {
@@ -138,7 +138,7 @@ class PrefixTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message\Prefix::raw
+     * @covers \PHPOxford\Spires\IRC\Message\Prefix::raw
      */
     public function can_get_the_raw_prefix_string_for_server_prefix()
     {

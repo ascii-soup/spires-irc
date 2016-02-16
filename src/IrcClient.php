@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc;
+namespace PHPOxford\Spires\IRC;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Command;
-use PHPOxford\SpiresIrc\Irc\Commands\Join;
-use PHPOxford\SpiresIrc\Irc\Commands\Ping;
-use PHPOxford\SpiresIrc\Irc\Commands\Privmsg;
-use PHPOxford\SpiresIrc\Irc\Connection;
-use PHPOxford\SpiresIrc\Irc\Message;
-use PHPOxford\SpiresIrc\Irc\Message\Prefix;
-use PHPOxford\SpiresIrc\Irc\Parser;
-use PHPOxford\SpiresIrc\Irc\User;
+use PHPOxford\Spires\IRC\Commands\Command;
+use PHPOxford\Spires\IRC\Commands\Join;
+use PHPOxford\Spires\IRC\Commands\Ping;
+use PHPOxford\Spires\IRC\Commands\Privmsg;
+use PHPOxford\Spires\IRC\Connection;
+use PHPOxford\Spires\IRC\Message;
+use PHPOxford\Spires\IRC\Message\Prefix;
+use PHPOxford\Spires\IRC\Parser;
+use PHPOxford\Spires\IRC\User;
 
 class IrcClient
 {

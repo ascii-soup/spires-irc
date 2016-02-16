@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc\Irc\Message;
+namespace PHPOxford\Spires\IRC\Message;
 
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 interface Command
 {

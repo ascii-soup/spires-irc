@@ -1,15 +1,15 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc\Commands;
+namespace PHPOxford\Spires\IRC\Tests\Irc\Commands;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Pong;
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Commands\Pong;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 class PongTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong
      */
     public function implements_command_interface()
     {
@@ -20,7 +20,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::command
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::command
      */
     public function can_get_the_command_string()
     {
@@ -31,7 +31,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::server
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::server
      */
     public function can_get_server()
     {
@@ -42,7 +42,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::server2
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::server2
      */
     public function can_get_server2()
     {
@@ -53,7 +53,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::params
      */
     public function can_get_params_with_one_server()
     {
@@ -64,7 +64,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::params
      */
     public function can_get_params_with_two_servers()
     {
@@ -75,7 +75,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::__toString
      */
     public function can_cast_to_string_with_server1()
     {
@@ -86,7 +86,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::__toString
      */
     public function can_cast_to_string_with_server1_and_server2()
     {
@@ -97,7 +97,7 @@ class PongTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Pong::fromParams
+     * @covers \PHPOxford\Spires\IRC\Commands\Pong::fromParams
      */
     public function can_construct_from_params()
     {

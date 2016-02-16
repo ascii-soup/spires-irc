@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc;
+namespace PHPOxford\Spires\IRC;
 
-use PHPOxford\SpiresIrc\Irc\Message;
+use PHPOxford\Spires\IRC\Message;
 
 interface Plugin
 {

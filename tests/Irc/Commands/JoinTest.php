@@ -1,15 +1,15 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc\Commands;
+namespace PHPOxford\Spires\IRC\Tests\Irc\Commands;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Join;
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Commands\Join;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 class JoinTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join
+     * @covers \PHPOxford\Spires\IRC\Commands\Join
      */
     public function implements_command_interface()
     {
@@ -20,7 +20,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::command
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::command
      */
     public function can_get_the_command_string()
     {
@@ -31,7 +31,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::channels
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::channels
      */
     public function can_get_channels()
     {
@@ -42,7 +42,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::keys
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::keys
      */
     public function can_get_keys()
     {
@@ -53,7 +53,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::params
      */
     public function can_get_params_with_one_channel()
     {
@@ -64,7 +64,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::params
      */
     public function can_get_params_with_more_channels()
     {
@@ -75,7 +75,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::params
      */
     public function can_get_params_with_one_key()
     {
@@ -86,7 +86,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::params
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::params
      */
     public function can_get_params_with_more_keys()
     {
@@ -97,7 +97,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::__toString
      */
     public function can_cast_to_string_with_channels()
     {
@@ -108,7 +108,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::__toString
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::__toString
      */
     public function can_cast_to_string_with_channels_and_keys()
     {
@@ -119,7 +119,7 @@ class JoinTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Commands\Join::fromParams
+     * @covers \PHPOxford\Spires\IRC\Commands\Join::fromParams
      */
     public function can_construct_from_params()
     {

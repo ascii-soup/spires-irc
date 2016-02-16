@@ -1,17 +1,17 @@
 <?php
 
-namespace PHPOxford\SpiresIrc\Tests\Irc;
+namespace PHPOxford\Spires\IRC\Tests\Irc;
 
-use PHPOxford\SpiresIrc\Irc\Message;
-use PHPOxford\SpiresIrc\Irc\Message\Prefix;
-use PHPOxford\SpiresIrc\Irc\Commands\Command;
-use PHPOxford\SpiresIrc\Irc\Message\Command as CommandInterface;
+use PHPOxford\Spires\IRC\Message;
+use PHPOxford\Spires\IRC\Message\Prefix;
+use PHPOxford\Spires\IRC\Commands\Command;
+use PHPOxford\Spires\IRC\Message\Command as CommandInterface;
 
 class MessageTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message::prefix
+     * @covers \PHPOxford\Spires\IRC\Message::prefix
      */
     public function holds_prefix_instance()
     {
@@ -25,7 +25,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message::command
+     * @covers \PHPOxford\Spires\IRC\Message::command
      */
     public function holds_command_instance()
     {
@@ -39,7 +39,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message::raw
+     * @covers \PHPOxford\Spires\IRC\Message::raw
      */
     public function can_get_the_raw_message_without_prefix()
     {
@@ -53,7 +53,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \PHPOxford\SpiresIrc\Irc\Message::raw
+     * @covers \PHPOxford\Spires\IRC\Message::raw
      */
     public function can_get_the_raw_message_with_prefix()
     {

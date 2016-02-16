@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPOxford\SpiresIrc\Plugins;
+namespace PHPOxford\Spires\IRC\Plugins;
 
-use PHPOxford\SpiresIrc\Irc\Commands\Join;
-use PHPOxford\SpiresIrc\Irc\Message;
-use PHPOxford\SpiresIrc\IrcClient;
-use PHPOxford\SpiresIrc\Plugin;
+use PHPOxford\Spires\IRC\Commands\Join;
+use PHPOxford\Spires\IRC\Message;
+use PHPOxford\Spires\IRC\IrcClient;
+use PHPOxford\Spires\IRC\Plugin;
 
 class Welcome implements Plugin
 {
